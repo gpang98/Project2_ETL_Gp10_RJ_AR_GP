@@ -1,4 +1,11 @@
 -- Codes to create the Schema for the crowdfunding_db
+--  The creation of the tables must followed this sequence (category, subcategory, contact and finally campaign).  The 1st
+--      three tables can be created in any order since they are independent with their respective Primary Key but campaign
+--      table has to be created last since it uses the primary keys from other tables as Foreign Keys.
+--  The same sequence is also used to do data loading.  The 1st three can be in any order but campaign table is the last
+--      to be loaded using the Data Import csv option.
+
+
 -- category Table
 CREATE TABLE category (
   category_id VARCHAR PRIMARY KEY,
